@@ -1,0 +1,12 @@
+{
+  "name": "scorecard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:weitude/ScoreCard.git",
+  "author": "weitude <eric.c.w.lin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "server": "cd backend && yarn server"
+  }
+}
