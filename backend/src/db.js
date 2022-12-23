@@ -8,7 +8,7 @@ export default {
 
         mongoose.connect(
             process.env.MONGO_URL, {
-                dbName: "DB",
+                dbName: "ScoreCard",
             })
             .then(() => console.log("mongo db connection created"));
     }

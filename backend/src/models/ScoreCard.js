@@ -8,5 +8,5 @@ const ScoreCardSchema = new Schema({
     score: Number
 });
 
-const ScoreCard = mongoose.model('scorecard', ScoreCardSchema);
+const ScoreCard = mongoose.model('card', ScoreCardSchema);
 export default ScoreCard;

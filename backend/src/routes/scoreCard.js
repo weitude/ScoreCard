@@ -53,7 +53,7 @@ router.get("/cards", async (req, res) => {
     try {
         if (queryType === "name") {
             const q = await ScoreCard.find({name: queryString})
-            const len = q.length
+            const len = q?.length
             if (len === 0) {
                 res.json({messages: false, message: queryType + ' (' + queryString + ') not found!'})
             }
@@ -65,7 +65,7 @@ router.get("/cards", async (req, res) => {
         }
         else if (queryType === "subject") {
             const q = await ScoreCard.find({subject: queryString})
-            const len = q.length
+            const len = q?.length
             if (len === 0) {
                 res.json({messages: false, message: queryType + ' (' + queryString + ') not found!'})
             }
