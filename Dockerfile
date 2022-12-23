@@ -12,7 +12,7 @@ RUN apk add --no-cache --update nodejs yarn
 
 WORKDIR /usr/src/app
 
-COPY backend/package.json backend/.env backend/yarn.lock ./
+COPY backend/package.json backend/yarn.lock ./
 COPY backend/src ./src
 
 RUN yarn install --production
