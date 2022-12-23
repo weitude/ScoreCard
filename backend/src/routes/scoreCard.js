@@ -1,10 +1,12 @@
 import {Router} from "express";
 
-import ScoreCard from "../models/ScoreCard";
+import ScoreCard from "../models/ScoreCard.js";
 
 const router = Router();
 
-//CLEAR
+// #################################
+// Clear
+// #################################
 router.delete("/cards", async (_, res) => {
     try {
         await ScoreCard.deleteMany({});
@@ -15,7 +17,9 @@ router.delete("/cards", async (_, res) => {
     }
 });
 
-//ADD
+// #################################
+// Add
+// #################################
 router.post("/card", async (req, res) => {
     const name = req.body.name
     const subject = req.body.subject
@@ -38,17 +42,18 @@ router.post("/card", async (req, res) => {
     }
 });
 
-//QUERY
+// #################################
+// Query
+// #################################
 router.get("/cards", async (req, res) => {
     const queryType = req.query.type
     const queryString = req.query.queryString
     let messages = []
-
+    console.log(queryType, queryString)
     try {
         if (queryType === "name") {
             const q = await ScoreCard.find({name: queryString})
             const len = q.length
-            console.log(len)
             if (len === 0) {
                 res.json({messages: false, message: queryType + ' (' + queryString + ') not found!'})
             }
@@ -73,6 +78,10 @@ router.get("/cards", async (req, res) => {
     } catch (e) {
         throw new Error("QUERY error: " + e);
     }
+});
+
+router.get("/health", async (_, res) => {
+    res.send("<h1>Health Check!</h1>")
 });
 
 export default router;
