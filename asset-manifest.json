@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ScoreCard/static/css/main.9f088a99.css",
+    "main.js": "/ScoreCard/static/js/main.ca42ed6a.js",
+    "static/js/787.cda612ba.chunk.js": "/ScoreCard/static/js/787.cda612ba.chunk.js",
+    "index.html": "/ScoreCard/index.html",
+    "main.9f088a99.css.map": "/ScoreCard/static/css/main.9f088a99.css.map",
+    "main.ca42ed6a.js.map": "/ScoreCard/static/js/main.ca42ed6a.js.map",
+    "787.cda612ba.chunk.js.map": "/ScoreCard/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f088a99.css",
+    "static/js/main.ca42ed6a.js"
+  ]
+}
